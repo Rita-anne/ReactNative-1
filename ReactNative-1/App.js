@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { TextInput } from 'react-native-paper';
+import { black } from 'react-native-paper/lib/typescript/styles/themes/v2/colors';
 
 export default function App() {
   return (
@@ -14,6 +15,9 @@ export default function App() {
         <TextInput style={styles.email} label='Email' mode='flat'placeholder='Useramee'/>
         <TextInput style={styles.pass} label='Password' mode='flat'placeholder='Useramee'/>
         <TextInput style={styles.regi} label='Register' mode='flat'placeholder='Useramee'/>
+        <View>
+          
+        </View>
     </View>
   );
 }
@@ -34,21 +38,36 @@ const styles = StyleSheet.create({
   inputs:{
     margin:5,
     padding:5,
+    borderRadius:100,
+    borderTopEndRadius:100,
+    borderTopStartRadius:100,
     
   },
    email:{
     margin:5,
     padding:5,
+     borderRadius:100,
+     borderTopEndRadius:100,
+    borderTopStartRadius:100,
     
   },
    pass:{
     margin:5,
     padding:5,
+     borderRadius:100,
+     borderTopEndRadius:100,
+    borderTopStartRadius:100,
     
   },
    regi:{
     margin:5,
     padding:5,
+     borderRadius:100,
+     borderTopEndRadius:100,
+    borderTopStartRadius:100,
+    backgroundColor:'black',
+    color:'white',
+    textAlign:'center',
     
   },
 });

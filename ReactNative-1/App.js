@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
   },
   img:{
     width:'100%',
-    // margin:10,
   },
   inputs:{
     margin:5,
@@ -65,9 +64,6 @@ const styles = StyleSheet.create({
      borderRadius:100,
      borderTopEndRadius:100,
     borderTopStartRadius:100,
-    backgroundColor:'black',
-    color:'white',
-    textAlign:'center',
     
   },
 });

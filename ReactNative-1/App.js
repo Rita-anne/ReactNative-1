@@ -11,17 +11,20 @@ export default function App() {
        <StatusBar style="auto" /> 
        <Text style={styles.reg} >Register</Text> 
       </View>
-        <TextInput style={styles.inputs} label='Username' mode='flat'placeholder='Useramee'/>
-        <TextInput style={styles.email} label='Email' mode='flat'placeholder='Useramee'/>
-        <TextInput style={styles.pass} label='Password' mode='flat'placeholder='Useramee'/>  
+        <TextInput style={styles.inputs} label='Username' mode='flat'underlineColor='#ffffe6' placeholder='Useramee'
+        left={<TextInput.Icon icon={'account' } style={{backgroundColor:'#ffccb3', borderRadius:100, color:' #ffd480'}} />}/>
+        <TextInput style={styles.email} label='Email' mode='flat' underlineColor='#ffffe6'placeholder='Useramee'
+         left={<TextInput.Icon icon={'email' } style={{backgroundColor:'#ccffeb', borderRadius:100}} />}/>
+        <TextInput style={styles.pass} label='Password' mode='flat' underlineColor='#ffffe6'placeholder='Useramee'
+         left={<TextInput.Icon icon={'lock' } style={{backgroundColor:'#b3d9ff', borderRadius:100}} />}/>  
       
          <TouchableOpacity>
           <Text style={styles.regi}> Register</Text>
     </TouchableOpacity>  
     <View style={styles.icons}>
-<Icon name='facebook' color='blue' style={{padding:5,borderRadius:150,}}/>
-<Icon name='google' type='font-awesome'style={{padding:5,}}/>
-<Icon name='apple' type='font-awesome'style={{padding:5,}}/> 
+<Icon name='facebook' color='blue' style={{backgroundColor:'white',borderRadius:100, padding:15,}}/>
+<Icon name='google' type='font-awesome'style={{backgroundColor:'white', borderRadius:100,padding:15}}/>
+<Icon name='apple' type='font-awesome'style={{backgroundColor:'white',borderRadius:100,padding:15}}/> 
     </View> 
     </View>
   );
@@ -29,12 +32,14 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'white',
+    backgroundColor: '#f2f2f2',
+    padding:5,
   },
   reg:{
     textAlign:'center',
     fontWeight:'900',
     fontSize:20,
+    padding:5,
   },
   img:{
     width:'100%',
@@ -68,7 +73,7 @@ const styles = StyleSheet.create({
     color:'white',
     textAlign:'center',
     backgroundColor:'black',
-    padding:15,
+    padding:25,
     margin:10,
     borderRadius:100,
   },
@@ -78,6 +83,6 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     justifyContent:'center',
     justifyContent:'space-around',
-    padding:20,
+    padding:15,
   },
 });

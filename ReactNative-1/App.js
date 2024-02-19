@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import { TextInput } from 'react-native-paper';
-import { black } from 'react-native-paper/lib/typescript/styles/themes/v2/colors';
+import { StyleSheet, Text, View, Image,TouchableOpacity } from 'react-native';
+import { TextInput, Button } from 'react-native-paper';
+import { Icon } from 'react-native-elements'
 
 export default function App() {
   return (
@@ -13,18 +13,23 @@ export default function App() {
       </View>
         <TextInput style={styles.inputs} label='Username' mode='flat'placeholder='Useramee'/>
         <TextInput style={styles.email} label='Email' mode='flat'placeholder='Useramee'/>
-        <TextInput style={styles.pass} label='Password' mode='flat'placeholder='Useramee'/>
-        <TextInput style={styles.regi} label='Register' mode='flat'placeholder='Useramee'/>
-        <View>
-          
-        </View>
+        <TextInput style={styles.pass} label='Password' mode='flat'placeholder='Useramee'/>  
+      
+         <TouchableOpacity>
+          <Text style={styles.regi}> Register</Text>
+    </TouchableOpacity>  
+    <View style={styles.icons}>
+<Icon name='facebook' color='blue' style={{padding:5,borderRadius:150,}}/>
+<Icon name='google' type='font-awesome'style={{padding:5,}}/>
+<Icon name='apple' type='font-awesome'style={{padding:5,}}/> 
+    </View> 
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'pink',
+    backgroundColor: 'white',
   },
   reg:{
     textAlign:'center',
@@ -33,6 +38,7 @@ const styles = StyleSheet.create({
   },
   img:{
     width:'100%',
+    // margin:10,
   },
   inputs:{
     margin:5,
@@ -53,17 +59,25 @@ const styles = StyleSheet.create({
    pass:{
     margin:5,
     padding:5,
-     borderRadius:100,
+    borderRadius:100,
      borderTopEndRadius:100,
     borderTopStartRadius:100,
     
   },
-   regi:{
-    margin:5,
-    padding:5,
-     borderRadius:100,
-     borderTopEndRadius:100,
-    borderTopStartRadius:100,
-    
+  regi:{
+    color:'white',
+    textAlign:'center',
+    backgroundColor:'black',
+    padding:15,
+    margin:10,
+    borderRadius:100,
+  },
+  icons:{
+
+    display:'flex',
+    flexDirection:'row',
+    justifyContent:'center',
+    justifyContent:'space-around',
+    padding:20,
   },
 });
